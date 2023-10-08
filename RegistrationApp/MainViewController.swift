@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -29,10 +29,16 @@ class MainViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard userNameTextField.text == "Admin", passwordTextField.text == "Password" else {
+    override func shouldPerformSegue(
+        withIdentifier identifier: String,
+        sender: Any?
+    ) -> Bool {
+        guard userNameTextField.text == "Admin",
+              passwordTextField.text == "Password"
+        else {
             showAlert(with: "Oops!", and: "Incorrect login or password")
             return false
         }
@@ -40,11 +46,13 @@ class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? WelcomeViewController else { return }
+        guard let destination = segue.destination as? WelcomeViewController
+        else { return }
         destination.userName = userNameTextField.text ?? ""
     }
     
     @IBAction func logInButtonPressed() {
+        
     }
     
     @IBAction func forgotUserNameButtonPressed() {
@@ -64,12 +72,15 @@ class MainViewController: UIViewController {
 //MARK: - UIAlertController
 extension MainViewController {
     private func showAlert(with title: String, and messege: String) {
-        let alert = UIAlertController(title: title, message: messege, preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: title, 
+            message: messege,
+            preferredStyle: .alert
+        )
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
                 self.userNameTextField.text = ""
                 self.passwordTextField.text = ""
     }
-    
         alert.addAction(okAction)
         
         present(alert, animated: true)

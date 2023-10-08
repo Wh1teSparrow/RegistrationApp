@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B00A3AE82AD058EB00CF2286 /* Registration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Registration.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00A3AE82AD058EB00CF2286 /* RegistrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegistrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00A3AEB2AD058EB00CF2286 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B00A3AED2AD058EB00CF2286 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B00A3AEF2AD058EB00CF2286 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		B00A3ADF2AD058EB00CF2286 = {
 			isa = PBXGroup;
 			children = (
-				B00A3AEA2AD058EB00CF2286 /* Registration */,
+				B00A3AEA2AD058EB00CF2286 /* RegistrationApp */,
 				B00A3AE92AD058EB00CF2286 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +50,12 @@
 		B00A3AE92AD058EB00CF2286 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B00A3AE82AD058EB00CF2286 /* Registration.app */,
+				B00A3AE82AD058EB00CF2286 /* RegistrationApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B00A3AEA2AD058EB00CF2286 /* Registration */ = {
+		B00A3AEA2AD058EB00CF2286 /* RegistrationApp */ = {
 			isa = PBXGroup;
 			children = (
 				B00A3AEB2AD058EB00CF2286 /* AppDelegate.swift */,
@@ -67,15 +67,15 @@
 				B00A3AF62AD058EC00CF2286 /* LaunchScreen.storyboard */,
 				B00A3AF92AD058EC00CF2286 /* Info.plist */,
 			);
-			path = Registration;
+			path = RegistrationApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B00A3AE72AD058EB00CF2286 /* Registration */ = {
+		B00A3AE72AD058EB00CF2286 /* RegistrationApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B00A3AFC2AD058EC00CF2286 /* Build configuration list for PBXNativeTarget "Registration" */;
+			buildConfigurationList = B00A3AFC2AD058EC00CF2286 /* Build configuration list for PBXNativeTarget "RegistrationApp" */;
 			buildPhases = (
 				B00A3AE42AD058EB00CF2286 /* Sources */,
 				B00A3AE52AD058EB00CF2286 /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = Registration;
+			name = RegistrationApp;
 			productName = RegistrationApp;
-			productReference = B00A3AE82AD058EB00CF2286 /* Registration.app */;
+			productReference = B00A3AE82AD058EB00CF2286 /* RegistrationApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,8 +105,8 @@
 					};
 				};
 			};
-			buildConfigurationList = B00A3AE32AD058EB00CF2286 /* Build configuration list for PBXProject "Registration" */;
-			compatibilityVersion = "Xcode 14.0";
+			buildConfigurationList = B00A3AE32AD058EB00CF2286 /* Build configuration list for PBXProject "RegistrationApp" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B00A3AE72AD058EB00CF2286 /* Registration */,
+				B00A3AE72AD058EB00CF2286 /* RegistrationApp */,
 			);
 		};
 /* End PBXProject section */
@@ -356,7 +356,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B00A3AE32AD058EB00CF2286 /* Build configuration list for PBXProject "Registration" */ = {
+		B00A3AE32AD058EB00CF2286 /* Build configuration list for PBXProject "RegistrationApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B00A3AFA2AD058EC00CF2286 /* Debug */,
@@ -365,7 +365,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B00A3AFC2AD058EC00CF2286 /* Build configuration list for PBXNativeTarget "Registration" */ = {
+		B00A3AFC2AD058EC00CF2286 /* Build configuration list for PBXNativeTarget "RegistrationApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B00A3AFD2AD058EC00CF2286 /* Debug */,

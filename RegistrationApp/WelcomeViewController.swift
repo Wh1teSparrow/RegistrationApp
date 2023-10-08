@@ -7,7 +7,8 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
+    
     @IBOutlet weak var welcomeLabel: UILabel!
     
     var userName = ""
@@ -15,16 +16,20 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        welcomeLabel.text = "Welcome, \(userName)!"
         let gradientLayer = CAGradientLayer()
+        
         gradientLayer.frame = view.bounds
         gradientLayer.colors = [
-            UIColor.systemBlue.cgColor,
-            UIColor.systemGreen.cgColor
+            UIColor.systemPink.cgColor,
+            UIColor.systemBlue.cgColor
         ]
+        
         view.layer.insertSublayer(gradientLayer, at: .zero)
+        
+        welcomeLabel.text = "Welcome, \(userName)!"
     }
     
     @IBAction func logOutButtonPressed() {
+        
     }
 }
