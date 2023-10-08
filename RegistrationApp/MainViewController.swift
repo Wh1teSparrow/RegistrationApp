@@ -20,10 +20,6 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userNameTextField.placeholder = "User Name"
-        passwordTextField.placeholder = "Passowrd"
-        
-        logInButton.setTitle("Log In", for: .normal)
         logInButton.layer.cornerRadius = 7
     }
     
@@ -77,10 +73,12 @@ extension MainViewController {
             message: messege,
             preferredStyle: .alert
         )
+        
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-                self.userNameTextField.text = ""
-                self.passwordTextField.text = ""
-    }
+            self.userNameTextField.text = ""
+            self.passwordTextField.text = ""
+        }
+        
         alert.addAction(okAction)
         
         present(alert, animated: true)
