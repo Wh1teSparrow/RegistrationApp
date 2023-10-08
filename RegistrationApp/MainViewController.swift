@@ -35,7 +35,11 @@ final class MainViewController: UIViewController {
         guard userNameTextField.text == "Admin",
               passwordTextField.text == "Password"
         else {
-            showAlert(with: "Oops!", and: "Incorrect login or password")
+            showAlert(
+                with: "Oops!",
+                and: "Incorrect login or password",
+                textFields: [userNameTextField, passwordTextField]
+            )
             return false
         }
         return true
@@ -51,12 +55,20 @@ final class MainViewController: UIViewController {
         
     }
     
-    @IBAction func forgotUserNameButtonPressed() {
-        showAlert(with: "Oops!", and: "Your name is Admin")
+    @IBAction func forgotUserNameButtonPressed(_ sender: UIButton) {
+        showAlert(
+            with: "Oops!",
+            and: "Your name is Admin",
+            textFields: [userNameTextField]
+        )
     }
     
-    @IBAction func forgotPasswordButtonPressed() {
-        showAlert(with: "Oops!", and: "Your password is Password")
+    @IBAction func forgotPasswordButtonPressed(_ sender: UIButton) {
+        showAlert(
+            with: "Oops!",
+            and: "Your password is Password",
+            textFields: [passwordTextField]
+        )
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -67,16 +79,21 @@ final class MainViewController: UIViewController {
 
 //MARK: - UIAlertController
 extension MainViewController {
-    private func showAlert(with title: String, and messege: String) {
+    private func showAlert(
+        with title: String,
+        and messege: String,
+        textFields: [UITextField]
+    ) {
         let alert = UIAlertController(
-            title: title, 
+            title: title,
             message: messege,
             preferredStyle: .alert
         )
         
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.userNameTextField.text = ""
-            self.passwordTextField.text = ""
+            for textField in textFields {
+                textField.text = ""
+            }
         }
         
         alert.addAction(okAction)
