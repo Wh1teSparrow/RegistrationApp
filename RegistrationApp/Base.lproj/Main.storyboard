@@ -207,40 +207,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n8f-pL-dvR">
-                                <rect key="frame" x="85" y="97" width="150" height="150"/>
+                                <rect key="frame" x="85" y="104" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="n8f-pL-dvR" secondAttribute="height" multiplier="1:1" id="zWc-m6-zAJ"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="k58-FS-QQE">
-                                <rect key="frame" x="20" y="297" width="280" height="192"/>
+                                <rect key="frame" x="20" y="304" width="280" height="192"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMP-Mg-Fod">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="36"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDe-TY-h9n">
                                         <rect key="frame" x="0.0" y="52" width="280" height="36"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3X-67-WbL">
                                         <rect key="frame" x="0.0" y="104" width="280" height="36"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Etl-qs-39P">
                                         <rect key="frame" x="0.0" y="156" width="280" height="36"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSc-zs-XUB">
+                                <rect key="frame" x="20" y="64" width="280" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qis-x0-95C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -248,8 +254,11 @@
                             <constraint firstItem="k58-FS-QQE" firstAttribute="leading" secondItem="Qis-x0-95C" secondAttribute="leading" constant="20" id="5Vv-2t-tZx"/>
                             <constraint firstItem="Qis-x0-95C" firstAttribute="trailing" secondItem="k58-FS-QQE" secondAttribute="trailing" constant="20" id="C5w-OT-Idd"/>
                             <constraint firstItem="Qis-x0-95C" firstAttribute="trailing" secondItem="n8f-pL-dvR" secondAttribute="trailing" constant="85" id="GiZ-Dp-kQk"/>
-                            <constraint firstItem="n8f-pL-dvR" firstAttribute="top" secondItem="Qis-x0-95C" secondAttribute="top" constant="53" id="SwD-wr-emK"/>
+                            <constraint firstItem="rSc-zs-XUB" firstAttribute="leading" secondItem="Qis-x0-95C" secondAttribute="leading" constant="20" id="Lth-Ue-fcQ"/>
+                            <constraint firstItem="n8f-pL-dvR" firstAttribute="top" secondItem="Qis-x0-95C" secondAttribute="top" constant="60" id="SwD-wr-emK"/>
+                            <constraint firstItem="rSc-zs-XUB" firstAttribute="top" secondItem="Qis-x0-95C" secondAttribute="top" constant="20" id="bYY-pO-Tae"/>
                             <constraint firstItem="n8f-pL-dvR" firstAttribute="centerX" secondItem="c6i-9g-tjm" secondAttribute="centerX" id="fh5-jM-Kw4"/>
+                            <constraint firstItem="Qis-x0-95C" firstAttribute="trailing" secondItem="rSc-zs-XUB" secondAttribute="trailing" constant="20" id="mT0-6U-n8m"/>
                             <constraint firstItem="k58-FS-QQE" firstAttribute="top" secondItem="n8f-pL-dvR" secondAttribute="bottom" constant="50" id="sI2-Ov-SxV"/>
                             <constraint firstItem="n8f-pL-dvR" firstAttribute="leading" secondItem="Qis-x0-95C" secondAttribute="leading" constant="85" id="xUY-RP-nJt"/>
                         </constraints>
@@ -263,6 +272,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="userName" destination="rSc-zs-XUB" id="P38-kM-gBK"/>
                         <outlet property="userPhoto" destination="n8f-pL-dvR" id="hUC-lo-Q1B"/>
                         <outletCollection property="userInfoLabels" destination="zMP-Mg-Fod" collectionClass="NSMutableArray" id="gXG-nu-oHF"/>
                         <outletCollection property="userInfoLabels" destination="nDe-TY-h9n" collectionClass="NSMutableArray" id="048-TH-waw"/>
