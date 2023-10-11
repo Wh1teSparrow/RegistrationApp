@@ -22,6 +22,16 @@ final class UserViewController: UIViewController {
         getUserInfo()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        userPhoto.layer.cornerRadius = userPhoto.frame.width / 2
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let bioVC = segue.destination as? BioViewController else { return }
+        bioVC.user = user
+    }
     
     private func getUserInfo() {
         for userInfoLabel in userInfoLabels {
@@ -35,16 +45,5 @@ final class UserViewController: UIViewController {
                 userInfoLabel.text = "Post: \(user.person.info.post) "
             }
         }
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        userPhoto.layer.cornerRadius = userPhoto.frame.width / 2
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let bioVC = segue.destination as? BioViewController else { return }
-        bioVC.user = user
     }
 }
