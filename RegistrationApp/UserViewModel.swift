@@ -26,7 +26,7 @@ struct User {
                 info: Info(
                     placeOfBirth: "Kogalym",
                     post: "Security systems engineer",
-                    bio: "Born in the city of Kogalym in 2000. He loves mountains and travel. In the past, he was professionally engaged in ice climbing. He rides a skateboard and likes to listen to deathcore.",
+                    bio: "I born in the city of Kogalym in 2000. I love mountains and travel. In the past, i was professionally engaged in ice climbing. I like skateboarding and listening to deathcore.",
                     friends: ["Tim Cook", "Jony Ive"]
                 )))
     }

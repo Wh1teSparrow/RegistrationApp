@@ -8,7 +8,7 @@
 import UIKit
 
 final class UserViewController: UIViewController {
-    @IBOutlet weak var userName: UILabel!
+    
     @IBOutlet weak var userPhoto: UIImageView!
     @IBOutlet var userInfoLabels: [UILabel]!
     
@@ -17,8 +17,10 @@ final class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userName.text = "\(user.person.fullname.name) \(user.person.fullname.surname)"
+        addGradientLayer()
+        
         userPhoto.image = user.person.photo
+        
         getUserInfo()
     }
     

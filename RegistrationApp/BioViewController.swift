@@ -10,15 +10,14 @@ import UIKit
 final class BioViewController: UIViewController {
     
     @IBOutlet weak var userBio: UILabel!
-    @IBOutlet weak var userName: UILabel!
     
     var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userBio.text = user.person.info.bio
+        addGradientLayer()
         
-        userName.text = "\(user.person.fullname.name) \(user.person.fullname.surname)"
+        userBio.text = user.person.info.bio
     }
 }

@@ -93,7 +93,7 @@ extension MainViewController {
         )
         
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-                textField?.text = ""
+            textField?.text = ""
         }
         
         alert.addAction(okAction)
