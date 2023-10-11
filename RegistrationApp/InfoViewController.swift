@@ -7,23 +7,25 @@
 
 import UIKit
 
-class InfoViewController: UIViewController {
-
+final class InfoViewController: UIViewController {
+    
+    @IBOutlet var userFriends: [UILabel]!
+    
+    var user: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        addFriend()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func addFriend() {
+        for userFriend in userFriends {
+            if userFriend.tag == 0 {
+                userFriend.text = "1." + user.person.info.friends[0]
+            } else {
+                userFriend.text = "2." + user.person.info.friends[1]
+            }
+        }
     }
-    */
-
 }

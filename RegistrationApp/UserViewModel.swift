@@ -12,8 +12,23 @@ struct User {
     let password: String
     let person: Person
     
-    static func getuser() -> User {
-        User(login: "User", password: "Password", person: Person(fullname: FullName(name: "Kirill", surname: "Syrtsev"), photo: "", info: Info(placeOfBirth: "Kogalym", job: "Optimus LCC", post: "Security systems engineer", bio: "Born in the city of Kogalym in 2000")))
+    static func getUser() -> User {
+        User(
+            login: "User",
+            password: "Password",
+            person: Person(
+                fullname: FullName(
+                    name: "Kirill",
+                    surname: "Syrtsev"
+                ),
+                photo: "",
+                info: Info(
+                    placeOfBirth: "Kogalym",
+                    job: "Optimus LCC",
+                    post: "Security systems engineer",
+                    bio: "Born in the city of Kogalym in 2000",
+                    friends: ["Tim Cook", "Jony Ive"]
+                )))
     }
 }
 
@@ -33,4 +48,5 @@ struct Info {
     let job: String
     let post: String
     let bio: String
+    let friends: [String]
 }

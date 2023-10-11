@@ -7,23 +7,36 @@
 
 import UIKit
 
-class UserViewController: UIViewController {
-
+final class UserViewController: UIViewController {
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userPhoto: UIImageView!
+    @IBOutlet var userInfoLabels: [UILabel]!
+    
+    var user: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        userName.text = "\(user.person.fullname.name) \(user.person.fullname.surname)"
+        
+        getUserInfo()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func getUserInfo() {
+        for userInfoLabel in userInfoLabels {
+            if userInfoLabel.tag == 0 {
+                userInfoLabel.text = "Name: \(user.person.fullname.name) "
+            } else if userInfoLabel.tag == 1 {
+                userInfoLabel.text = "Surname: \(user.person.fullname.surname) "
+            } else if userInfoLabel.tag == 2 {
+                userInfoLabel.text = "Place of birth: \(user.person.info.placeOfBirth)"
+            } else if userInfoLabel.tag == 3 {
+                userInfoLabel.text = "Post: \(user.person.info.post) "
+            }
+        }
     }
-    */
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let bioVC = segue.destination as? BioViewController else { return }
+        bioVC.user = user
+    }
 }

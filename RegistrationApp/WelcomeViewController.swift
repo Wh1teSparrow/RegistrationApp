@@ -11,11 +11,20 @@ final class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
     
-    var userName = ""
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addGradientLayer()
+        
+        welcomeLabel.text = "Welcome, \(user.login)!"
+    }
+}
+
+// MARK: - Set background gradient color
+extension WelcomeViewController {
+    private func addGradientLayer() {
         let gradientLayer = CAGradientLayer()
         
         gradientLayer.frame = view.bounds
@@ -25,11 +34,5 @@ final class WelcomeViewController: UIViewController {
         ]
         
         view.layer.insertSublayer(gradientLayer, at: .zero)
-        
-        welcomeLabel.text = "Welcome, \(userName)!"
-    }
-    
-    @IBAction func logOutButtonPressed() {
-        
     }
 }

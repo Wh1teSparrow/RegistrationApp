@@ -14,8 +14,7 @@ final class MainViewController: UIViewController {
     
     @IBOutlet weak var logInButton: UIButton!
     
-    @IBOutlet weak var forgotUserNameButton: UIButton!
-    @IBOutlet weak var forgotPasswordButton: UIButton!
+    private let user = User.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +31,13 @@ final class MainViewController: UIViewController {
         withIdentifier identifier: String,
         sender: Any?
     ) -> Bool {
-        guard userNameTextField.text == "Admin",
-              passwordTextField.text == "Password"
+        guard userNameTextField.text == user.login,
+              passwordTextField.text == user.password
         else {
             showAlert(
                 with: "Oops!",
                 and: "Incorrect login or password",
-                textFields: [userNameTextField, passwordTextField]
+                textField: passwordTextField
             )
             return false
         }
@@ -46,28 +45,31 @@ final class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? WelcomeViewController
+        guard let tabBarController = segue.destination as? UITabBarController
         else { return }
-        destination.userName = userNameTextField.text ?? ""
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let navigationController = viewController as? UINavigationController {
+                if let userVC = navigationController.topViewController as? UserViewController {
+                    userVC.user = user
+                }
+            } else if let infoVC = viewController as? InfoViewController {
+                infoVC.user = user
+            }
+        }
     }
     
-    @IBAction func logInButtonPressed() {
-        
-    }
-    
-    @IBAction func forgotUserNameButtonPressed(_ sender: UIButton) {
-        showAlert(
+    @IBAction func forgotRegistrationData(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(
             with: "Oops!",
-            and: "Your name is Admin",
-            textFields: [userNameTextField]
+            and: "Your name is \(user.login)"
         )
-    }
-    
-    @IBAction func forgotPasswordButtonPressed(_ sender: UIButton) {
-        showAlert(
+        : showAlert(
             with: "Oops!",
-            and: "Your password is Password",
-            textFields: [passwordTextField]
+            and: "Your name is \(user.password)"
         )
     }
     
@@ -82,7 +84,7 @@ extension MainViewController {
     private func showAlert(
         with title: String,
         and messege: String,
-        textFields: [UITextField]
+        textField: UITextField? = nil
     ) {
         let alert = UIAlertController(
             title: title,
@@ -91,9 +93,7 @@ extension MainViewController {
         )
         
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            for textField in textFields {
-                textField.text = ""
-            }
+                textField?.text = ""
         }
         
         alert.addAction(okAction)
@@ -101,4 +101,3 @@ extension MainViewController {
         present(alert, animated: true)
     }
 }
-
