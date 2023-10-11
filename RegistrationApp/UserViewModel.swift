@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct User {
     let login: String
@@ -21,10 +22,9 @@ struct User {
                     name: "Kirill",
                     surname: "Syrtsev"
                 ),
-                photo: "",
+                photo: UIImage(named: "Photo"),
                 info: Info(
                     placeOfBirth: "Kogalym",
-                    job: "Optimus LCC",
                     post: "Security systems engineer",
                     bio: "Born in the city of Kogalym in 2000",
                     friends: ["Tim Cook", "Jony Ive"]
@@ -34,7 +34,7 @@ struct User {
 
 struct Person {
     let fullname: FullName
-    let photo: String
+    let photo: UIImage!
     let info: Info
 }
 
@@ -45,7 +45,6 @@ struct FullName {
 
 struct Info {
     let placeOfBirth: String
-    let job: String
     let post: String
     let bio: String
     let friends: [String]

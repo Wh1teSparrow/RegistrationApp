@@ -18,9 +18,10 @@ final class UserViewController: UIViewController {
         super.viewDidLoad()
         
         userName.text = "\(user.person.fullname.name) \(user.person.fullname.surname)"
-        
+        userPhoto.image = user.person.photo
         getUserInfo()
     }
+    
     
     private func getUserInfo() {
         for userInfoLabel in userInfoLabels {
@@ -35,6 +36,13 @@ final class UserViewController: UIViewController {
             }
         }
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        userPhoto.layer.cornerRadius = userPhoto.frame.width / 2
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let bioVC = segue.destination as? BioViewController else { return }
         bioVC.user = user
