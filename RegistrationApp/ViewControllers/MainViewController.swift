@@ -52,10 +52,10 @@ final class MainViewController: UIViewController {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.user = user
             } else if let navigationController = viewController as? UINavigationController {
-                if let userVC = navigationController.topViewController as? UserViewController {
+                if let userVC = navigationController.topViewController as? UserInfoViewController {
                     userVC.user = user
                 }
-            } else if let infoVC = viewController as? InfoViewController {
+            } else if let infoVC = viewController as? UserFriendsViewController {
                 infoVC.user = user
             }
         }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class InfoViewController: UIViewController {
+final class UserFriendsViewController: UIViewController {
     
     @IBOutlet var userFriends: [UILabel]!
     

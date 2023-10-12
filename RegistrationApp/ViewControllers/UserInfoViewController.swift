@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class UserViewController: UIViewController {
+final class UserInfoViewController: UIViewController {
     
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userPhoto: UIImageView!
@@ -34,7 +34,7 @@ final class UserViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let bioVC = segue.destination as? BioViewController else { return }
+        guard let bioVC = segue.destination as? UserBioViewController else { return }
         bioVC.user = user
     }
     

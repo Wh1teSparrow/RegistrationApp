@@ -158,7 +158,7 @@
         <!--Friends-->
         <scene sceneID="vZI-wj-T4y">
             <objects>
-                <viewController id="UfE-nX-eca" customClass="InfoViewController" customModule="RegistrationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UfE-nX-eca" customClass="UserFriendsViewController" customModule="RegistrationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Prw-hp-Wk5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,10 +198,10 @@
             </objects>
             <point key="canvasLocation" x="5093" y="806"/>
         </scene>
-        <!--User View Controller-->
+        <!--User Info View Controller-->
         <scene sceneID="FOq-Td-TJw">
             <objects>
-                <viewController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="RJv-Lf-Dbd" customClass="UserViewController" customModule="RegistrationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="RJv-Lf-Dbd" customClass="UserInfoViewController" customModule="RegistrationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c6i-9g-tjm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -284,10 +284,10 @@
             </objects>
             <point key="canvasLocation" x="3401" y="806"/>
         </scene>
-        <!--Bio View Controller-->
+        <!--User Bio View Controller-->
         <scene sceneID="6eH-sx-1RY">
             <objects>
-                <viewController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="IC1-Kl-sbA" customClass="BioViewController" customModule="RegistrationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="IC1-Kl-sbA" customClass="UserBioViewController" customModule="RegistrationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FLP-GZ-Xdb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -22,17 +22,4 @@ final class WelcomeViewController: UIViewController {
     }
 }
 
-// MARK: - Set background gradient color
-extension UIViewController {
-    func addGradientLayer() {
-        let gradientLayer = CAGradientLayer()
-        
-        gradientLayer.frame = view.bounds
-        gradientLayer.colors = [
-            UIColor.systemPink.cgColor,
-            UIColor.systemBlue.cgColor
-        ]
-        
-        view.layer.insertSublayer(gradientLayer, at: .zero)
-    }
-}
+
